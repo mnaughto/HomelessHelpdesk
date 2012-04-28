@@ -14,7 +14,7 @@
 //with a vague description of the object, while "href" is a url which can be used to navigate
 //to the detail record. For convenience, there is also a function that will return the linked data.
 @interface SpringLink : NSObject
--(id)initFromIndex: (NSUInteger) index inArray: (NSArray *) array
+-(id)initFromIndex: (NSUInteger) index inArray: (NSArray *) array;
 -(NSURL*) url;
 -(NSString*) rel;
 -(SpringObject*) child;

@@ -12,13 +12,13 @@
 @implementation SpringLinkArray {
     NSArray* dataSource;
     //cache of the links created in objectAtIndex.
-    NSMutableArray* linkCache;
+    NSMutableDictionary* linkCache;
 }
 
 -(id) initWithArray:(NSArray *)array {
     if(self = [super init]){
         dataSource = array;
-        linkCache = [[NSMutableArray alloc] initWithCapacity:[self count]];
+        linkCache = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -28,10 +28,11 @@
 }
 
 -(id) objectAtIndex:(NSUInteger)index {
-    id result = [linkCache objectAtIndex:index];
+    id result = [linkCache objectForKey:[NSNumber numberWithUnsignedInteger:index]];
+    
     if(!result){
         SpringLink* newLink = [[SpringLink alloc] initFromIndex:index inArray:dataSource];
-        [linkCache replaceObjectAtIndex:index withObject:newLink];
+        [linkCache setObject:newLink forKey:[NSNumber numberWithUnsignedInteger:index]];
         result = newLink;
     }
     return result;

@@ -7,17 +7,23 @@
 //
 
 #import "CategoryTableViewController.h"
+#import "ServiceTableViewController.h"
+#import "SpringLinkArray.h"
+#import "SpringObject.h"
+#import "SpringLink.h"
 
 
 @implementation CategoryTableViewController {
     id categoryData;
+    SpringLinkArray * dataSource;
+    NSUInteger rowSelected;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        rowSelected = -1;
     }
     return self;
 }
@@ -59,16 +65,12 @@
 {
     [super viewDidAppear:animated];
     //NSString * urlString = @"http://vrcdata.cloudfoundry.com/";
-    NSString * urlString = @"http://projects.mikenaughton.me/categories.php";
+    //NSString * urlString = @"http://projects.mikenaughton.me/categories.php";
+    NSString* urlString = @"http://vrcapps.jelastic.servint.net/vrcdata/category";
     NSURL * url = [NSURL URLWithString:urlString];
-    NSURLRequest * request = [NSURLRequest requestWithURL:url];
-    NSURLResponse * response;
-    NSError * error;
-    NSData* result = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-
-    result = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingAllowFragments error:&error];
-    categoryData = result;
-    if(categoryData){
+    SpringObject * rootSource = [[SpringObject alloc] initWithContentsOfURL:url];
+    dataSource = [rootSource links];
+    if(dataSource){
         [self.tableView reloadData];
     }
 }
@@ -89,6 +91,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"serviceSelected"]){
+        //ServiceTableViewController* next = [segue destinationViewController];
+        if(rowSelected != -1 && categoryData){
+            /*NSArray* value = [categoryData valueForKey:@"_links"];
+            NSDictionary* category = [value objectAtIndex:rowSelected];
+            NSString* urlText = [category valueForKey:@"href"];
+            next.dataUrl = urlText;*/
+        } 
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -102,8 +117,8 @@
 {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    if(categoryData){
-        return [(NSArray*)[categoryData valueForKey:@"_links"] count];
+    if(dataSource){
+        return [dataSource count];
     } else {
         return 0;
     }
@@ -119,8 +134,8 @@
     }
     
     // Configure the cell...
-    NSArray* value = [categoryData valueForKey:@"_links"];
-    NSDictionary* category = [value objectAtIndex:indexPath.row];
+    SpringLink* link = [dataSource objectAtIndex:indexPath.row];
+    NSDictionary* category = [link child];
     NSString* cellText = [category valueForKey:@"name"];
     cell.textLabel.text = cellText;
     return cell;
@@ -180,6 +195,7 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    rowSelected = indexPath.row;
 }
 
 @end

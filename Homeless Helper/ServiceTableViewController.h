@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SpringLinkArray.h"
 
 @interface ServiceTableViewController : UITableViewController
-
+@property (weak) SpringLinkArray* dataSource;
 @end
