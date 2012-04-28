@@ -26,9 +26,11 @@
 		6376EBBA154C25C900D234E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EB8D154C25C900D234E6 /* Foundation.framework */; };
 		6376EBC2154C25C900D234E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBC0154C25C900D234E6 /* InfoPlist.strings */; };
 		6376EBC5154C25C900D234E6 /* Homeless_HelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBC4154C25C900D234E6 /* Homeless_HelperTests.m */; };
-		6376EBD0154C28C400D234E6 /* Requestor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBCF154C28C400D234E6 /* Requestor.m */; };
 		6376EBD3154C549600D234E6 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBD2154C549600D234E6 /* CategoryTableViewController.m */; };
 		6376EBD6154C54B700D234E6 /* ServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBD5154C54B700D234E6 /* ServiceTableViewController.m */; };
+		6376EBD9154C845100D234E6 /* SpringObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBD8154C845100D234E6 /* SpringObject.m */; };
+		6376EBDC154C85B600D234E6 /* SpringLinkArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBDB154C85B600D234E6 /* SpringLinkArray.m */; };
+		6376EBDF154C867000D234E6 /* SpringLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBDE154C867000D234E6 /* SpringLink.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,12 +70,16 @@
 		6376EBC1154C25C900D234E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6376EBC3154C25C900D234E6 /* Homeless_HelperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Homeless_HelperTests.h; sourceTree = "<group>"; };
 		6376EBC4154C25C900D234E6 /* Homeless_HelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Homeless_HelperTests.m; sourceTree = "<group>"; };
-		6376EBCE154C28C400D234E6 /* Requestor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requestor.h; sourceTree = "<group>"; };
-		6376EBCF154C28C400D234E6 /* Requestor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Requestor.m; sourceTree = "<group>"; };
 		6376EBD1154C549600D234E6 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
 		6376EBD2154C549600D234E6 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
 		6376EBD4154C54B700D234E6 /* ServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceTableViewController.h; sourceTree = "<group>"; };
 		6376EBD5154C54B700D234E6 /* ServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceTableViewController.m; sourceTree = "<group>"; };
+		6376EBD7154C845100D234E6 /* SpringObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringObject.h; sourceTree = "<group>"; };
+		6376EBD8154C845100D234E6 /* SpringObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringObject.m; sourceTree = "<group>"; };
+		6376EBDA154C85B600D234E6 /* SpringLinkArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLinkArray.h; sourceTree = "<group>"; };
+		6376EBDB154C85B600D234E6 /* SpringLinkArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLinkArray.m; sourceTree = "<group>"; };
+		6376EBDD154C867000D234E6 /* SpringLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringLink.h; sourceTree = "<group>"; };
+		6376EBDE154C867000D234E6 /* SpringLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringLink.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,12 +152,16 @@
 				6376EBAD154C25C900D234E6 /* second.png */,
 				6376EBAF154C25C900D234E6 /* second@2x.png */,
 				6376EB92154C25C900D234E6 /* Supporting Files */,
-				6376EBCE154C28C400D234E6 /* Requestor.h */,
-				6376EBCF154C28C400D234E6 /* Requestor.m */,
 				6376EBD1154C549600D234E6 /* CategoryTableViewController.h */,
 				6376EBD2154C549600D234E6 /* CategoryTableViewController.m */,
 				6376EBD4154C54B700D234E6 /* ServiceTableViewController.h */,
 				6376EBD5154C54B700D234E6 /* ServiceTableViewController.m */,
+				6376EBD7154C845100D234E6 /* SpringObject.h */,
+				6376EBD8154C845100D234E6 /* SpringObject.m */,
+				6376EBDA154C85B600D234E6 /* SpringLinkArray.h */,
+				6376EBDB154C85B600D234E6 /* SpringLinkArray.m */,
+				6376EBDD154C867000D234E6 /* SpringLink.h */,
+				6376EBDE154C867000D234E6 /* SpringLink.m */,
 			);
 			path = "Homeless Helper";
 			sourceTree = "<group>";
@@ -301,9 +311,11 @@
 				6376EB9C154C25C900D234E6 /* AppDelegate.m in Sources */,
 				6376EBA5154C25C900D234E6 /* FirstViewController.m in Sources */,
 				6376EBAC154C25C900D234E6 /* SecondViewController.m in Sources */,
-				6376EBD0154C28C400D234E6 /* Requestor.m in Sources */,
 				6376EBD3154C549600D234E6 /* CategoryTableViewController.m in Sources */,
 				6376EBD6154C54B700D234E6 /* ServiceTableViewController.m in Sources */,
+				6376EBD9154C845100D234E6 /* SpringObject.m in Sources */,
+				6376EBDC154C85B600D234E6 /* SpringLinkArray.m in Sources */,
+				6376EBDF154C867000D234E6 /* SpringLink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
