@@ -26,6 +26,9 @@
 		6376EBBA154C25C900D234E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EB8D154C25C900D234E6 /* Foundation.framework */; };
 		6376EBC2154C25C900D234E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBC0154C25C900D234E6 /* InfoPlist.strings */; };
 		6376EBC5154C25C900D234E6 /* Homeless_HelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBC4154C25C900D234E6 /* Homeless_HelperTests.m */; };
+		6376EBD0154C28C400D234E6 /* Requestor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBCF154C28C400D234E6 /* Requestor.m */; };
+		6376EBD3154C549600D234E6 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBD2154C549600D234E6 /* CategoryTableViewController.m */; };
+		6376EBD6154C54B700D234E6 /* ServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBD5154C54B700D234E6 /* ServiceTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,28 +46,34 @@
 		6376EB8B154C25C900D234E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6376EB8D154C25C900D234E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6376EB8F154C25C900D234E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6376EB93154C25C900D234E6 /* Homeless Helper-Info.plist */ = {isa = PBXFileReference; path = "Homeless Helper-Info.plist"; sourceTree = "<group>"; };
+		6376EB93154C25C900D234E6 /* Homeless Helper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Homeless Helper-Info.plist"; sourceTree = "<group>"; };
 		6376EB95154C25C900D234E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6376EB97154C25C900D234E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6376EB99154C25C900D234E6 /* Homeless Helper-Prefix.pch */ = {isa = PBXFileReference; path = "Homeless Helper-Prefix.pch"; sourceTree = "<group>"; };
-		6376EB9A154C25C900D234E6 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		6376EB99154C25C900D234E6 /* Homeless Helper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Homeless Helper-Prefix.pch"; sourceTree = "<group>"; };
+		6376EB9A154C25C900D234E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6376EB9B154C25C900D234E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6376EB9E154C25C900D234E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		6376EBA1154C25C900D234E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		6376EBA3154C25C900D234E6 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		6376EBA3154C25C900D234E6 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		6376EBA4154C25C900D234E6 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		6376EBA6154C25C900D234E6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		6376EBA8154C25C900D234E6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		6376EBAA154C25C900D234E6 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		6376EBAA154C25C900D234E6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		6376EBAB154C25C900D234E6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		6376EBAD154C25C900D234E6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		6376EBAF154C25C900D234E6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		6376EBB6154C25C900D234E6 /* Homeless HelperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Homeless HelperTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6376EBB7154C25C900D234E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		6376EBBF154C25C900D234E6 /* Homeless HelperTests-Info.plist */ = {isa = PBXFileReference; path = "Homeless HelperTests-Info.plist"; sourceTree = "<group>"; };
+		6376EBBF154C25C900D234E6 /* Homeless HelperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Homeless HelperTests-Info.plist"; sourceTree = "<group>"; };
 		6376EBC1154C25C900D234E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6376EBC3154C25C900D234E6 /* Homeless_HelperTests.h */ = {isa = PBXFileReference; path = Homeless_HelperTests.h; sourceTree = "<group>"; };
+		6376EBC3154C25C900D234E6 /* Homeless_HelperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Homeless_HelperTests.h; sourceTree = "<group>"; };
 		6376EBC4154C25C900D234E6 /* Homeless_HelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Homeless_HelperTests.m; sourceTree = "<group>"; };
+		6376EBCE154C28C400D234E6 /* Requestor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requestor.h; sourceTree = "<group>"; };
+		6376EBCF154C28C400D234E6 /* Requestor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Requestor.m; sourceTree = "<group>"; };
+		6376EBD1154C549600D234E6 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		6376EBD2154C549600D234E6 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		6376EBD4154C54B700D234E6 /* ServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceTableViewController.h; sourceTree = "<group>"; };
+		6376EBD5154C54B700D234E6 /* ServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +146,12 @@
 				6376EBAD154C25C900D234E6 /* second.png */,
 				6376EBAF154C25C900D234E6 /* second@2x.png */,
 				6376EB92154C25C900D234E6 /* Supporting Files */,
+				6376EBCE154C28C400D234E6 /* Requestor.h */,
+				6376EBCF154C28C400D234E6 /* Requestor.m */,
+				6376EBD1154C549600D234E6 /* CategoryTableViewController.h */,
+				6376EBD2154C549600D234E6 /* CategoryTableViewController.m */,
+				6376EBD4154C54B700D234E6 /* ServiceTableViewController.h */,
+				6376EBD5154C54B700D234E6 /* ServiceTableViewController.m */,
 			);
 			path = "Homeless Helper";
 			sourceTree = "<group>";
@@ -286,6 +301,9 @@
 				6376EB9C154C25C900D234E6 /* AppDelegate.m in Sources */,
 				6376EBA5154C25C900D234E6 /* FirstViewController.m in Sources */,
 				6376EBAC154C25C900D234E6 /* SecondViewController.m in Sources */,
+				6376EBD0154C28C400D234E6 /* Requestor.m in Sources */,
+				6376EBD3154C549600D234E6 /* CategoryTableViewController.m in Sources */,
+				6376EBD6154C54B700D234E6 /* ServiceTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
