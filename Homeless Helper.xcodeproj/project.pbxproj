@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6376EB8C154C25C900D234E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EB8B154C25C900D234E6 /* UIKit.framework */; };
+		6376EB8E154C25C900D234E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EB8D154C25C900D234E6 /* Foundation.framework */; };
+		6376EB90154C25C900D234E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EB8F154C25C900D234E6 /* CoreGraphics.framework */; };
+		6376EB96154C25C900D234E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6376EB94154C25C900D234E6 /* InfoPlist.strings */; };
+		6376EB98154C25C900D234E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EB97154C25C900D234E6 /* main.m */; };
+		6376EB9C154C25C900D234E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EB9B154C25C900D234E6 /* AppDelegate.m */; };
+		6376EB9F154C25C900D234E6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6376EB9D154C25C900D234E6 /* MainStoryboard_iPhone.storyboard */; };
+		6376EBA2154C25C900D234E6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBA0154C25C900D234E6 /* MainStoryboard_iPad.storyboard */; };
+		6376EBA5154C25C900D234E6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBA4154C25C900D234E6 /* FirstViewController.m */; };
+		6376EBA7154C25C900D234E6 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBA6154C25C900D234E6 /* first.png */; };
+		6376EBA9154C25C900D234E6 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBA8154C25C900D234E6 /* first@2x.png */; };
+		6376EBAC154C25C900D234E6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBAB154C25C900D234E6 /* SecondViewController.m */; };
+		6376EBAE154C25C900D234E6 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBAD154C25C900D234E6 /* second.png */; };
+		6376EBB0154C25C900D234E6 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBAF154C25C900D234E6 /* second@2x.png */; };
+		6376EBB8154C25C900D234E6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EBB7154C25C900D234E6 /* SenTestingKit.framework */; };
+		6376EBB9154C25C900D234E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EB8B154C25C900D234E6 /* UIKit.framework */; };
+		6376EBBA154C25C900D234E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EB8D154C25C900D234E6 /* Foundation.framework */; };
+		6376EBC2154C25C900D234E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBC0154C25C900D234E6 /* InfoPlist.strings */; };
+		6376EBC5154C25C900D234E6 /* Homeless_HelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBC4154C25C900D234E6 /* Homeless_HelperTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6376EBBB154C25C900D234E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6376EB7E154C25C800D234E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6376EB86154C25C900D234E6;
+			remoteInfo = "Homeless Helper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6376EB87154C25C900D234E6 /* Homeless Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homeless Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6376EB8B154C25C900D234E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6376EB8D154C25C900D234E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6376EB8F154C25C900D234E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6376EB93154C25C900D234E6 /* Homeless Helper-Info.plist */ = {isa = PBXFileReference; path = "Homeless Helper-Info.plist"; sourceTree = "<group>"; };
+		6376EB95154C25C900D234E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6376EB97154C25C900D234E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6376EB99154C25C900D234E6 /* Homeless Helper-Prefix.pch */ = {isa = PBXFileReference; path = "Homeless Helper-Prefix.pch"; sourceTree = "<group>"; };
+		6376EB9A154C25C900D234E6 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		6376EB9B154C25C900D234E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6376EB9E154C25C900D234E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		6376EBA1154C25C900D234E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		6376EBA3154C25C900D234E6 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		6376EBA4154C25C900D234E6 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		6376EBA6154C25C900D234E6 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		6376EBA8154C25C900D234E6 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		6376EBAA154C25C900D234E6 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		6376EBAB154C25C900D234E6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		6376EBAD154C25C900D234E6 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		6376EBAF154C25C900D234E6 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		6376EBB6154C25C900D234E6 /* Homeless HelperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Homeless HelperTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6376EBB7154C25C900D234E6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6376EBBF154C25C900D234E6 /* Homeless HelperTests-Info.plist */ = {isa = PBXFileReference; path = "Homeless HelperTests-Info.plist"; sourceTree = "<group>"; };
+		6376EBC1154C25C900D234E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6376EBC3154C25C900D234E6 /* Homeless_HelperTests.h */ = {isa = PBXFileReference; path = Homeless_HelperTests.h; sourceTree = "<group>"; };
+		6376EBC4154C25C900D234E6 /* Homeless_HelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Homeless_HelperTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6376EB84154C25C900D234E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6376EB8C154C25C900D234E6 /* UIKit.framework in Frameworks */,
+				6376EB8E154C25C900D234E6 /* Foundation.framework in Frameworks */,
+				6376EB90154C25C900D234E6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6376EBB2154C25C900D234E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6376EBB8154C25C900D234E6 /* SenTestingKit.framework in Frameworks */,
+				6376EBB9154C25C900D234E6 /* UIKit.framework in Frameworks */,
+				6376EBBA154C25C900D234E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6376EB7C154C25C800D234E6 = {
+			isa = PBXGroup;
+			children = (
+				6376EB91154C25C900D234E6 /* Homeless Helper */,
+				6376EBBD154C25C900D234E6 /* Homeless HelperTests */,
+				6376EB8A154C25C900D234E6 /* Frameworks */,
+				6376EB88154C25C900D234E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6376EB88154C25C900D234E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6376EB87154C25C900D234E6 /* Homeless Helper.app */,
+				6376EBB6154C25C900D234E6 /* Homeless HelperTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6376EB8A154C25C900D234E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6376EB8B154C25C900D234E6 /* UIKit.framework */,
+				6376EB8D154C25C900D234E6 /* Foundation.framework */,
+				6376EB8F154C25C900D234E6 /* CoreGraphics.framework */,
+				6376EBB7154C25C900D234E6 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6376EB91154C25C900D234E6 /* Homeless Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6376EB9A154C25C900D234E6 /* AppDelegate.h */,
+				6376EB9B154C25C900D234E6 /* AppDelegate.m */,
+				6376EB9D154C25C900D234E6 /* MainStoryboard_iPhone.storyboard */,
+				6376EBA0154C25C900D234E6 /* MainStoryboard_iPad.storyboard */,
+				6376EBA3154C25C900D234E6 /* FirstViewController.h */,
+				6376EBA4154C25C900D234E6 /* FirstViewController.m */,
+				6376EBA6154C25C900D234E6 /* first.png */,
+				6376EBA8154C25C900D234E6 /* first@2x.png */,
+				6376EBAA154C25C900D234E6 /* SecondViewController.h */,
+				6376EBAB154C25C900D234E6 /* SecondViewController.m */,
+				6376EBAD154C25C900D234E6 /* second.png */,
+				6376EBAF154C25C900D234E6 /* second@2x.png */,
+				6376EB92154C25C900D234E6 /* Supporting Files */,
+			);
+			path = "Homeless Helper";
+			sourceTree = "<group>";
+		};
+		6376EB92154C25C900D234E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6376EB93154C25C900D234E6 /* Homeless Helper-Info.plist */,
+				6376EB94154C25C900D234E6 /* InfoPlist.strings */,
+				6376EB97154C25C900D234E6 /* main.m */,
+				6376EB99154C25C900D234E6 /* Homeless Helper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6376EBBD154C25C900D234E6 /* Homeless HelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				6376EBC3154C25C900D234E6 /* Homeless_HelperTests.h */,
+				6376EBC4154C25C900D234E6 /* Homeless_HelperTests.m */,
+				6376EBBE154C25C900D234E6 /* Supporting Files */,
+			);
+			path = "Homeless HelperTests";
+			sourceTree = "<group>";
+		};
+		6376EBBE154C25C900D234E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6376EBBF154C25C900D234E6 /* Homeless HelperTests-Info.plist */,
+				6376EBC0154C25C900D234E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6376EB86154C25C900D234E6 /* Homeless Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6376EBC8154C25C900D234E6 /* Build configuration list for PBXNativeTarget "Homeless Helper" */;
+			buildPhases = (
+				6376EB83154C25C900D234E6 /* Sources */,
+				6376EB84154C25C900D234E6 /* Frameworks */,
+				6376EB85154C25C900D234E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Homeless Helper";
+			productName = "Homeless Helper";
+			productReference = 6376EB87154C25C900D234E6 /* Homeless Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6376EBB5154C25C900D234E6 /* Homeless HelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6376EBCB154C25C900D234E6 /* Build configuration list for PBXNativeTarget "Homeless HelperTests" */;
+			buildPhases = (
+				6376EBB1154C25C900D234E6 /* Sources */,
+				6376EBB2154C25C900D234E6 /* Frameworks */,
+				6376EBB3154C25C900D234E6 /* Resources */,
+				6376EBB4154C25C900D234E6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6376EBBC154C25C900D234E6 /* PBXTargetDependency */,
+			);
+			name = "Homeless HelperTests";
+			productName = "Homeless HelperTests";
+			productReference = 6376EBB6154C25C900D234E6 /* Homeless HelperTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6376EB7E154C25C800D234E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 6376EB81154C25C800D234E6 /* Build configuration list for PBXProject "Homeless Helper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6376EB7C154C25C800D234E6;
+			productRefGroup = 6376EB88154C25C900D234E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6376EB86154C25C900D234E6 /* Homeless Helper */,
+				6376EBB5154C25C900D234E6 /* Homeless HelperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6376EB85154C25C900D234E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6376EB96154C25C900D234E6 /* InfoPlist.strings in Resources */,
+				6376EB9F154C25C900D234E6 /* MainStoryboard_iPhone.storyboard in Resources */,
+				6376EBA2154C25C900D234E6 /* MainStoryboard_iPad.storyboard in Resources */,
+				6376EBA7154C25C900D234E6 /* first.png in Resources */,
+				6376EBA9154C25C900D234E6 /* first@2x.png in Resources */,
+				6376EBAE154C25C900D234E6 /* second.png in Resources */,
+				6376EBB0154C25C900D234E6 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6376EBB3154C25C900D234E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6376EBC2154C25C900D234E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6376EBB4154C25C900D234E6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6376EB83154C25C900D234E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6376EB98154C25C900D234E6 /* main.m in Sources */,
+				6376EB9C154C25C900D234E6 /* AppDelegate.m in Sources */,
+				6376EBA5154C25C900D234E6 /* FirstViewController.m in Sources */,
+				6376EBAC154C25C900D234E6 /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6376EBB1154C25C900D234E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6376EBC5154C25C900D234E6 /* Homeless_HelperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6376EBBC154C25C900D234E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6376EB86154C25C900D234E6 /* Homeless Helper */;
+			targetProxy = 6376EBBB154C25C900D234E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6376EB94154C25C900D234E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6376EB95154C25C900D234E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6376EB9D154C25C900D234E6 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6376EB9E154C25C900D234E6 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		6376EBA0154C25C900D234E6 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6376EBA1154C25C900D234E6 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		6376EBC0154C25C900D234E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6376EBC1154C25C900D234E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6376EBC6154C25C900D234E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6376EBC7154C25C900D234E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6376EBC9154C25C900D234E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Homeless Helper/Homeless Helper-Prefix.pch";
+				INFOPLIST_FILE = "Homeless Helper/Homeless Helper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6376EBCA154C25C900D234E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Homeless Helper/Homeless Helper-Prefix.pch";
+				INFOPLIST_FILE = "Homeless Helper/Homeless Helper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6376EBCC154C25C900D234E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Homeless Helper.app/Homeless Helper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Homeless Helper/Homeless Helper-Prefix.pch";
+				INFOPLIST_FILE = "Homeless HelperTests/Homeless HelperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6376EBCD154C25C900D234E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Homeless Helper.app/Homeless Helper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Homeless Helper/Homeless Helper-Prefix.pch";
+				INFOPLIST_FILE = "Homeless HelperTests/Homeless HelperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6376EB81154C25C800D234E6 /* Build configuration list for PBXProject "Homeless Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6376EBC6154C25C900D234E6 /* Debug */,
+				6376EBC7154C25C900D234E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6376EBC8154C25C900D234E6 /* Build configuration list for PBXNativeTarget "Homeless Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6376EBC9154C25C900D234E6 /* Debug */,
+				6376EBCA154C25C900D234E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6376EBCB154C25C900D234E6 /* Build configuration list for PBXNativeTarget "Homeless HelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6376EBCC154C25C900D234E6 /* Debug */,
+				6376EBCD154C25C900D234E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6376EB7E154C25C800D234E6 /* Project object */;
+}
