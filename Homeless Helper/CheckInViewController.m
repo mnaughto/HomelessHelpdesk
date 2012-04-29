@@ -28,7 +28,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -65,14 +65,17 @@
     veteranStatusSelection.bounds = CGRectMake(veteranStatusSelection.bounds.origin.x, veteranStatusSelection.bounds.origin.y, veteranStatusSelection.bounds.size.width, selectorSize);
     dutyStatusSelection.bounds = CGRectMake(dutyStatusSelection.bounds.origin.x, dutyStatusSelection.bounds.origin.y, dutyStatusSelection.bounds.size.width, selectorSize);
     disabledSelection.bounds = CGRectMake(disabledSelection.bounds.origin.x, disabledSelection.bounds.origin.y, disabledSelection.bounds.size.width, selectorSize);
-    activeDutyRowPath = [self.tableView indexPathForCell:activeDutyRow];
-    yearsServedLabelRowPath = [self.tableView indexPathForCell:yearsServedLabelRow];
-    yearsServedRowPath = [self.tableView indexPathForCell:yearsServedRow];    
+    activeDutyRowPath = [NSIndexPath indexPathForRow:3 inSection:0];
+    yearsServedLabelRowPath = [NSIndexPath indexPathForRow:4 inSection:0];
+    yearsServedRowPath = [NSIndexPath indexPathForRow:5 inSection:0];
+    //activeDutyRowPath = [self.tableView indexPathForCell:activeDutyRow];
+    //yearsServedLabelRowPath = [self.tableView indexPathForCell:yearsServedLabelRow];
+    //yearsServedRowPath = [self.tableView indexPathForCell:yearsServedRow];    
     
     //[self.tableView beginUpdates];
     //[self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:activeDutyRowPath, yearsServedLabelRowPath, yearsServedRowPath, nil] withRowAnimation: UITableViewRowAnimationNone];
     //[self.tableView endUpdates];
-    [veteranStatusSelection setSelectedSegmentIndex:1];    
+    //[veteranStatusSelection setSelectedSegmentIndex:1];    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
