@@ -127,22 +127,15 @@
 
 -(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     switch (buttonIndex) {
-        case 0:
-            [UIPasteboard generalPasteboard].string = [[[uiWebView request] URL] description];
-            [actionSheet dismissWithClickedButtonIndex:buttonIndex animated:YES];
-            break;
         case 1:
+            [UIPasteboard generalPasteboard].string = [[[uiWebView request] URL] description];
+            break;
+        case 0:
             [[UIApplication sharedApplication] openURL:[[uiWebView request] URL]];
-            [actionSheet dismissWithClickedButtonIndex:buttonIndex animated:YES];
             break;
         default:
-            //[actionSheet dismissWithClickedButtonIndex:buttonIndex animated:YES];
             break;
     }
-}
-
--(void) actionSheetCancel:(UIActionSheet *)actionSheet {
-    //[actionSheet dismissWithClickedButtonIndex:[actionSheet cancelButtonIndex] animated:YES];
 }
 
 @end
