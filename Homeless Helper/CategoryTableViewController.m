@@ -94,12 +94,12 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([[segue identifier] isEqualToString:@"serviceSelected"]){
-        //ServiceTableViewController* next = [segue destinationViewController];
-        if(rowSelected != -1 && categoryData){
-            /*NSArray* value = [categoryData valueForKey:@"_links"];
-            NSDictionary* category = [value objectAtIndex:rowSelected];
-            NSString* urlText = [category valueForKey:@"href"];
-            next.dataUrl = urlText;*/
+        ServiceTableViewController* next = [segue destinationViewController];
+        if(rowSelected != -1 && dataSource){
+            SpringLink *categoryLink = [dataSource objectAtIndex:rowSelected];
+            SpringObject *category = [categoryLink child];
+            SpringObject *programList = [[[category links] objectAtIndex:0] child];
+            next.dataSource = [programList links];
         } 
     }
 }

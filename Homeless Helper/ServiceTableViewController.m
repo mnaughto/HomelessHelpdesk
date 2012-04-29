@@ -7,17 +7,42 @@
 //
 
 #import "ServiceTableViewController.h"
+#import "SpringLink.h"
 
 
-@implementation ServiceTableViewController
+@implementation ServiceTableViewController {
+    NSMutableDictionary * organizationGrouping;
+    NSMutableArray * organizationNames;
+    SpringLinkArray * _dataSource;
+}
 
 @synthesize dataSource;
+
+-(SpringLinkArray *) dataSource {
+    return _dataSource;
+}
+
+-(void) setDataSource:(SpringLinkArray *)dataSource2 {
+    organizationGrouping = [NSMutableDictionary dictionary];
+    organizationNames = [NSMutableArray array];
+    for(SpringLink * link in dataSource2){
+        NSString* orgName = [[link child] objectForKey:@"organization"];
+        if(![organizationGrouping objectForKey:orgName]){
+            [organizationGrouping setObject:[NSMutableArray array] forKey:orgName];
+            [organizationNames addObject:orgName];
+        }
+        NSMutableArray* programs = [organizationGrouping objectForKey:orgName];
+        [programs addObject:link];
+    }
+    _dataSource = dataSource2;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        organizationGrouping = [NSMutableDictionary dictionary];
+        organizationNames = [NSMutableArray array];
     }
     return self;
 }
@@ -81,21 +106,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+//#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return [organizationGrouping count];
+}
+
+-(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [organizationNames objectAtIndex:section];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+//#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    
+    return [[organizationGrouping objectForKey:[organizationNames objectAtIndex:section]] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"reusable";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -103,7 +133,10 @@
     }
     
     // Configure the cell...
-    
+    NSString * orgName = [organizationNames objectAtIndex:indexPath.section];
+    NSMutableArray * programs = [organizationGrouping objectForKey:orgName];
+    SpringLink * program = [programs objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[program child] objectForKey:@"name"];
     return cell;
 }
 
