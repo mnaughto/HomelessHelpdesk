@@ -41,6 +41,8 @@
 		6376EBF1154D065B00D234E6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBF0154D065A00D234E6 /* WebViewController.m */; };
 		6376EBF4154D1ED000D234E6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBF3154D1ED000D234E6 /* MapViewController.m */; };
 		6376EBF6154D2AC900D234E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EBF5154D2AC900D234E6 /* CoreLocation.framework */; };
+		6380043C154D80EF00F74738 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6380043B154D80EF00F74738 /* SearchViewController.m */; };
+		6380043F154D84FE00F74738 /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6380043E154D84FD00F74738 /* CheckInViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,10 @@
 		6376EBF2154D1ED000D234E6 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		6376EBF3154D1ED000D234E6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		6376EBF5154D2AC900D234E6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6380043A154D80EF00F74738 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		6380043B154D80EF00F74738 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		6380043D154D84FD00F74738 /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
+		6380043E154D84FD00F74738 /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +140,6 @@
 		6376EB7C154C25C800D234E6 = {
 			isa = PBXGroup;
 			children = (
-				6376EBF5154D2AC900D234E6 /* CoreLocation.framework */,
 				6376EB91154C25C900D234E6 /* Homeless Helper */,
 				6376EBBD154C25C900D234E6 /* Homeless HelperTests */,
 				6376EB8A154C25C900D234E6 /* Frameworks */,
@@ -154,6 +159,7 @@
 		6376EB8A154C25C900D234E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6376EBF5154D2AC900D234E6 /* CoreLocation.framework */,
 				6376EBED154D046000D234E6 /* MapKit.framework */,
 				6376EB8B154C25C900D234E6 /* UIKit.framework */,
 				6376EB8D154C25C900D234E6 /* Foundation.framework */,
@@ -194,6 +200,10 @@
 				6376EBF0154D065A00D234E6 /* WebViewController.m */,
 				6376EBF2154D1ED000D234E6 /* MapViewController.h */,
 				6376EBF3154D1ED000D234E6 /* MapViewController.m */,
+				6380043D154D84FD00F74738 /* CheckInViewController.h */,
+				6380043E154D84FD00F74738 /* CheckInViewController.m */,
+				6380043A154D80EF00F74738 /* SearchViewController.h */,
+				6380043B154D80EF00F74738 /* SearchViewController.m */,
 				6376EBD7154C845100D234E6 /* SpringObject.h */,
 				6376EBD8154C845100D234E6 /* SpringObject.m */,
 				6376EBDA154C85B600D234E6 /* SpringLinkArray.h */,
@@ -362,6 +372,8 @@
 				6376EBEC154CF3E100D234E6 /* ProgramDetailViewController.m in Sources */,
 				6376EBF1154D065B00D234E6 /* WebViewController.m in Sources */,
 				6376EBF4154D1ED000D234E6 /* MapViewController.m in Sources */,
+				6380043C154D80EF00F74738 /* SearchViewController.m in Sources */,
+				6380043F154D84FE00F74738 /* CheckInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +553,7 @@
 				6376EBCA154C25C900D234E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6376EBCB154C25C900D234E6 /* Build configuration list for PBXNativeTarget "Homeless HelperTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +562,7 @@
 				6376EBCD154C25C900D234E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
