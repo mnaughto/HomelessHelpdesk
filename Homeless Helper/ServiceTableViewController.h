@@ -10,5 +10,5 @@
 #import "SpringLinkArray.h"
 
 @interface ServiceTableViewController : UITableViewController
-@property (weak) SpringLinkArray* dataSource;
+@property (strong) SpringLinkArray* dataSource;
 @end

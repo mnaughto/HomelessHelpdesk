@@ -196,6 +196,7 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
     rowSelected = indexPath.row;
+    [self performSegueWithIdentifier:@"serviceSelected" sender:[tableView cellForRowAtIndexPath:indexPath]];
 }
 
 @end

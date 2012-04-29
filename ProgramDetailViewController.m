@@ -1,41 +1,29 @@
 //
-//  ServiceTableViewController.m
+//  ProgramDetailViewController.m
 //  Homeless Helper
 //
 //  Created by Mac User on 4/28/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ServiceTableViewController.h"
-#import "SpringLink.h"
 #import "ProgramDetailViewController.h"
 
 
-@implementation ServiceTableViewController {
-    NSMutableDictionary * organizationGrouping;
-    NSMutableArray * organizationNames;
-    SpringLinkArray * _dataSource;
-    NSIndexPath * lastSelected;
+@implementation ProgramDetailViewController {
+    SpringObject * _dataSource;    
 }
+@synthesize detailText;
+@synthesize eligibilityText;
+@synthesize costText;
+@synthesize phoneText;
+@synthesize urlText;
+@synthesize addressText;
 
-@synthesize dataSource;
-
--(SpringLinkArray *) dataSource {
+-(SpringObject *) dataSource {
     return _dataSource;
 }
 
--(void) setDataSource:(SpringLinkArray *)dataSource2 {
-    organizationGrouping = [NSMutableDictionary dictionary];
-    organizationNames = [NSMutableArray array];
-    for(SpringLink * link in dataSource2){
-        NSString* orgName = [[link child] objectForKey:@"organization"];
-        if(![organizationGrouping objectForKey:orgName]){
-            [organizationGrouping setObject:[NSMutableArray array] forKey:orgName];
-            [organizationNames addObject:orgName];
-        }
-        NSMutableArray* programs = [organizationGrouping objectForKey:orgName];
-        [programs addObject:link];
-    }
+-(void) setDataSource:(SpringObject *)dataSource2 {    
     _dataSource = dataSource2;
 }
 
@@ -43,9 +31,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        organizationGrouping = [NSMutableDictionary dictionary];
-        organizationNames = [NSMutableArray array];
-        lastSelected = nil;
+        // Custom initialization
     }
     return self;
 }
@@ -73,6 +59,12 @@
 
 - (void)viewDidUnload
 {
+    [self setDetailText:nil];
+    [self setEligibilityText:nil];
+    [self setCostText:nil];
+    [self setAddressText:nil];
+    [self setUrlText:nil];
+    [self setPhoneText:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -81,6 +73,30 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    detailText.text = [self.dataSource objectForKey:@"description"];
+    costText.text = [self.dataSource objectForKey:@"cost"];
+    phoneText.text = [self.dataSource objectForKey:@"phone"];
+    urlText.text = [self.dataSource objectForKey:@"website"];
+    addressText.text = [self.dataSource objectForKey:@"address"];
+    NSString* eligibilityString = [NSString string];
+    NSDictionary* eligibility = [self.dataSource objectForKey:@"eligibility"];
+    if([eligibility objectForKey:@"veteran"]){
+        eligibilityString = [eligibilityString stringByAppendingString:@"Must be veteran.\n"];
+    }
+    if([eligibility objectForKey:@"disability"]){
+        eligibilityString = [eligibilityString stringByAppendingString:@"Must have a disability\n"];        
+    }
+    //mention any age limitations (min, max, range)
+    NSString* requiredGender = [eligibility objectForKey:@"gender"];
+    if(requiredGender && ![requiredGender isEqualToString:@"N"]){
+        if([requiredGender isEqualToString:@"F"]){
+            eligibilityString = [eligibilityString stringByAppendingString:@"Must be female.\n"];
+        } else if([requiredGender isEqualToString:@"M"]){
+            eligibilityString = [eligibilityString stringByAppendingString:@"Must be male.\n"];
+        }
+    }
+    eligibilityString = [eligibilityString stringByAppendingString:[eligibility objectForKey:@"note"]];
+    eligibilityText.text = eligibilityString;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -100,47 +116,29 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
+//    // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([[segue identifier] isEqualToString:@"detailView"]){
-        ProgramDetailViewController * next = segue.destinationViewController;
-        if(lastSelected && _dataSource){
-            NSString * orgName = [organizationNames objectAtIndex:lastSelected.section];
-            NSMutableArray * programs = [organizationGrouping objectForKey:orgName];
-            SpringLink * program = [programs objectAtIndex:lastSelected.row];
-            next.dataSource = [program child];
-        }
-    }
-}
-
-
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return [organizationGrouping count];
-}
-
--(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [organizationNames objectAtIndex:section];
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//#warning Incomplete method implementation.
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    
-    return [[organizationGrouping objectForKey:[organizationNames objectAtIndex:section]] count];
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"reusable";
+    static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -148,10 +146,7 @@
     }
     
     // Configure the cell...
-    NSString * orgName = [organizationNames objectAtIndex:indexPath.section];
-    NSMutableArray * programs = [organizationGrouping objectForKey:orgName];
-    SpringLink * program = [programs objectAtIndex:indexPath.row];
-    cell.textLabel.text = [[program child] objectForKey:@"name"];
+    
     return cell;
 }
 
@@ -205,8 +200,6 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
-    lastSelected = indexPath;
-    [self performSegueWithIdentifier:@"detailView" sender:[tableView cellForRowAtIndexPath:indexPath]];
 }
 
 @end
