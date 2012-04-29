@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *detailText;
 @property (weak, nonatomic) IBOutlet UITextView *eligibilityText;
 @property (weak, nonatomic) IBOutlet UITextView *costText;
+@property (weak, nonatomic) IBOutlet UITextView *hoursText;
 @property (weak, nonatomic) IBOutlet UILabel *phoneText;
 @property (weak, nonatomic) IBOutlet UILabel *urlText;
 @property (weak, nonatomic) IBOutlet UILabel *addressText;

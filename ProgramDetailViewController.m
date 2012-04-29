@@ -17,6 +17,7 @@
 @synthesize detailText;
 @synthesize eligibilityText;
 @synthesize costText;
+@synthesize hoursText;
 @synthesize phoneText;
 @synthesize urlText;
 @synthesize addressText;
@@ -67,6 +68,7 @@
     [self setAddressText:nil];
     [self setUrlText:nil];
     [self setPhoneText:nil];
+    [self setHoursText:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -75,11 +77,12 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    detailText.text = [self.dataSource objectForKey:@"description"];
+    detailText.text = [self.dataSource objectForKey:@"description"];    
     costText.text = [self.dataSource objectForKey:@"cost"];
     phoneText.text = [self.dataSource objectForKey:@"phone"];
     urlText.text = [self.dataSource objectForKey:@"website"];
     addressText.text = [self.dataSource objectForKey:@"address"];
+    hoursText.text = [self.dataSource objectForKey:@"hours"];
     NSString* eligibilityString = [NSString string];
     NSDictionary* eligibility = [self.dataSource objectForKey:@"eligibility"];
     if([eligibility objectForKey:@"veteran"]){
