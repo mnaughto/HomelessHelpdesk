@@ -37,6 +37,7 @@
 		6376EBE7154CE58200D234E6 /* bookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBE6154CE58100D234E6 /* bookIcon.png */; };
 		6376EBE9154CE6B300D234E6 /* checkIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBE8154CE6B300D234E6 /* checkIcon.png */; };
 		6376EBEC154CF3E100D234E6 /* ProgramDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBEB154CF3E100D234E6 /* ProgramDetailViewController.m */; };
+		6376EBEE154D046000D234E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EBED154D046000D234E6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		6376EBE8154CE6B300D234E6 /* checkIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkIcon.png; sourceTree = "<group>"; };
 		6376EBEA154CF3E100D234E6 /* ProgramDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgramDetailViewController.h; path = ../ProgramDetailViewController.h; sourceTree = "<group>"; };
 		6376EBEB154CF3E100D234E6 /* ProgramDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgramDetailViewController.m; path = ../ProgramDetailViewController.m; sourceTree = "<group>"; };
+		6376EBED154D046000D234E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6376EBEE154D046000D234E6 /* MapKit.framework in Frameworks */,
 				6376EB8C154C25C900D234E6 /* UIKit.framework in Frameworks */,
 				6376EB8E154C25C900D234E6 /* Foundation.framework in Frameworks */,
 				6376EB90154C25C900D234E6 /* CoreGraphics.framework in Frameworks */,
@@ -141,6 +144,7 @@
 		6376EB8A154C25C900D234E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6376EBED154D046000D234E6 /* MapKit.framework */,
 				6376EB8B154C25C900D234E6 /* UIKit.framework */,
 				6376EB8D154C25C900D234E6 /* Foundation.framework */,
 				6376EB8F154C25C900D234E6 /* CoreGraphics.framework */,
