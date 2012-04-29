@@ -8,6 +8,7 @@
 
 #import "ProgramDetailViewController.h"
 #import "WebViewController.h"
+#import "MapViewController.h"
 
 
 @implementation ProgramDetailViewController {
@@ -125,6 +126,9 @@
     if([[segue identifier] isEqualToString:@"urlView"]){
         WebViewController * next = [segue destinationViewController];
         next.url = [NSURL URLWithString:urlText.text];
+    } else if([[segue identifier] isEqualToString:@"addressView"]){
+        MapViewController * next = [segue destinationViewController];
+        next.address = addressText.text;
     }
 }
 

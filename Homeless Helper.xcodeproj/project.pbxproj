@@ -39,6 +39,8 @@
 		6376EBEC154CF3E100D234E6 /* ProgramDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBEB154CF3E100D234E6 /* ProgramDetailViewController.m */; };
 		6376EBEE154D046000D234E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EBED154D046000D234E6 /* MapKit.framework */; };
 		6376EBF1154D065B00D234E6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBF0154D065A00D234E6 /* WebViewController.m */; };
+		6376EBF4154D1ED000D234E6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBF3154D1ED000D234E6 /* MapViewController.m */; };
+		6376EBF6154D2AC900D234E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EBF5154D2AC900D234E6 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,9 @@
 		6376EBED154D046000D234E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		6376EBEF154D065A00D234E6 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		6376EBF0154D065A00D234E6 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		6376EBF2154D1ED000D234E6 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		6376EBF3154D1ED000D234E6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		6376EBF5154D2AC900D234E6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6376EBF6154D2AC900D234E6 /* CoreLocation.framework in Frameworks */,
 				6376EBEE154D046000D234E6 /* MapKit.framework in Frameworks */,
 				6376EB8C154C25C900D234E6 /* UIKit.framework in Frameworks */,
 				6376EB8E154C25C900D234E6 /* Foundation.framework in Frameworks */,
@@ -128,6 +134,7 @@
 		6376EB7C154C25C800D234E6 = {
 			isa = PBXGroup;
 			children = (
+				6376EBF5154D2AC900D234E6 /* CoreLocation.framework */,
 				6376EB91154C25C900D234E6 /* Homeless Helper */,
 				6376EBBD154C25C900D234E6 /* Homeless HelperTests */,
 				6376EB8A154C25C900D234E6 /* Frameworks */,
@@ -185,6 +192,8 @@
 				6376EBEB154CF3E100D234E6 /* ProgramDetailViewController.m */,
 				6376EBEF154D065A00D234E6 /* WebViewController.h */,
 				6376EBF0154D065A00D234E6 /* WebViewController.m */,
+				6376EBF2154D1ED000D234E6 /* MapViewController.h */,
+				6376EBF3154D1ED000D234E6 /* MapViewController.m */,
 				6376EBD7154C845100D234E6 /* SpringObject.h */,
 				6376EBD8154C845100D234E6 /* SpringObject.m */,
 				6376EBDA154C85B600D234E6 /* SpringLinkArray.h */,
@@ -352,6 +361,7 @@
 				6376EBDF154C867000D234E6 /* SpringLink.m in Sources */,
 				6376EBEC154CF3E100D234E6 /* ProgramDetailViewController.m in Sources */,
 				6376EBF1154D065B00D234E6 /* WebViewController.m in Sources */,
+				6376EBF4154D1ED000D234E6 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

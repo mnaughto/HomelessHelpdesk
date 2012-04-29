@@ -433,24 +433,39 @@
         <scene sceneID="eb2-Aq-qRe">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXm-1G-Kpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="0Yj-9j-a6R" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="0Yj-9j-a6R" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hmG-zQ-a1Q">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="ZUb-gc-cwc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0Yj-9j-a6R" id="6Ip-wQ-eZS"/>
+                                </connections>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="AHC-G1-sKp">
+                                <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0Nl-fV-baa"/>
+                                    <barButtonItem style="plain" systemItem="action" id="j9t-q7-wkF">
+                                        <connections>
+                                            <action selector="actionSelected:" destination="0Yj-9j-a6R" id="NJB-46-q3B"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="0Nl-fV-baa"/>
-                        <barButtonItem style="plain" systemItem="action" id="j9t-q7-wkF"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="AsR-U3-oyG"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="ZUb-gc-cwc" id="cyJ-G3-OJP"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2974" y="619"/>
@@ -466,7 +481,7 @@
                         <sections>
                             <tableViewSection headerTitle="Details" id="AHu-sV-Ej6">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="126" id="UYT-bh-piq">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="126" id="UYT-bh-piq">
                                         <rect key="frame" x="0.0" y="46" width="320" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -797,6 +812,13 @@
     <classes>
         <class className="CategoryTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CategoryTableViewController.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="actionSelected:"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
         </class>
         <class className="ProgramDetailViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProgramDetailViewController.h"/>
