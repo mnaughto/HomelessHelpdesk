@@ -7,6 +7,7 @@
 //
 
 #import "ProgramDetailViewController.h"
+#import "WebViewController.h"
 
 
 @implementation ProgramDetailViewController {
@@ -118,6 +119,13 @@
 {
 //    // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"urlView"]){
+        WebViewController * next = [segue destinationViewController];
+        next.url = [NSURL URLWithString:urlText.text];
+    }
 }
 
 #pragma mark - Table view data source

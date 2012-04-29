@@ -466,7 +466,7 @@
                         <sections>
                             <tableViewSection headerTitle="Details" id="AHu-sV-Ej6">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="126" id="UYT-bh-piq">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="126" id="UYT-bh-piq">
                                         <rect key="frame" x="0.0" y="46" width="320" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -490,7 +490,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Eligibility Requirements" id="is5-S6-Xcf">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="129" id="2mW-wY-K2k">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="129" id="2mW-wY-K2k">
                                         <rect key="frame" x="0.0" y="220" width="320" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -514,7 +514,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Cost" id="l0p-v1-IAj">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="134" id="2tM-jY-Thd">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="134" id="2tM-jY-Thd">
                                         <rect key="frame" x="0.0" y="397" width="320" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -626,9 +626,9 @@
         <scene sceneID="7C2-tr-ChV">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83x-Uc-Kgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Po3-8Q-dRr" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="Po3-8Q-dRr" customClass="WebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jlt-o2-zUa">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" id="Ua4-M3-efU">
@@ -637,21 +637,53 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6BG-Kd-KOz">
+                                <rect key="frame" x="0.0" y="372" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="reply" id="dev-T9-gQk">
+                                        <connections>
+                                            <action selector="backButtonSelected:" destination="Po3-8Q-dRr" id="WfE-8h-Wig"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8Q1-Pr-jxc"/>
+                                    <barButtonItem style="plain" systemItem="play" id="EPd-HP-D5H">
+                                        <connections>
+                                            <action selector="forwardButtonSelected:" destination="Po3-8Q-dRr" id="hgi-Qx-tNT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VMB-ZQ-WOk"/>
+                                    <barButtonItem style="plain" systemItem="refresh" id="d8A-Pc-NfV">
+                                        <connections>
+                                            <action selector="refreshButtonSelected:" destination="Po3-8Q-dRr" id="0fM-lJ-FtU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="stop" id="KSF-1H-1PW">
+                                        <connections>
+                                            <action selector="stopButtonSelected:" destination="Po3-8Q-dRr" id="TY5-aU-rgz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="efZ-ac-odx"/>
+                                    <barButtonItem style="plain" systemItem="action" id="776-Lb-Mzp">
+                                        <connections>
+                                            <action selector="actionButtonSelected:" destination="Po3-8Q-dRr" id="ENQ-Us-WIe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="reply" id="dev-T9-gQk"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="8Q1-Pr-jxc"/>
-                        <barButtonItem style="plain" systemItem="play" id="EPd-HP-D5H"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="VMB-ZQ-WOk"/>
-                        <barButtonItem style="plain" systemItem="refresh" id="d8A-Pc-NfV"/>
-                        <barButtonItem style="plain" systemItem="stop" id="KSF-1H-1PW"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="efZ-ac-odx"/>
-                        <barButtonItem style="plain" systemItem="action" id="776-Lb-Mzp"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="VEi-y2-NCn"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="dev-T9-gQk" id="0K6-Jq-TQA"/>
+                        <outlet property="forwardButton" destination="EPd-HP-D5H" id="bEQ-Hz-s7V"/>
+                        <outlet property="refreshButton" destination="d8A-Pc-NfV" id="cap-IJ-pqU"/>
+                        <outlet property="stopButton" destination="KSF-1H-1PW" id="bxS-8x-V2O"/>
+                        <outlet property="uiWebView" destination="Ua4-M3-efU" id="gWL-1T-2Id"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2968" y="25"/>
@@ -779,6 +811,21 @@
         </class>
         <class className="ServiceTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ServiceTableViewController.h"/>
+        </class>
+        <class className="WebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="actionButtonSelected:"/>
+                <relationship kind="action" name="backButtonSelected:"/>
+                <relationship kind="action" name="forwardButtonSelected:"/>
+                <relationship kind="action" name="refreshButtonSelected:"/>
+                <relationship kind="action" name="stopButtonSelected:"/>
+                <relationship kind="outlet" name="backButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="forwardButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="refreshButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="stopButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="uiWebView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -38,6 +38,7 @@
 		6376EBE9154CE6B300D234E6 /* checkIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6376EBE8154CE6B300D234E6 /* checkIcon.png */; };
 		6376EBEC154CF3E100D234E6 /* ProgramDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBEB154CF3E100D234E6 /* ProgramDetailViewController.m */; };
 		6376EBEE154D046000D234E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6376EBED154D046000D234E6 /* MapKit.framework */; };
+		6376EBF1154D065B00D234E6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6376EBF0154D065A00D234E6 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		6376EBEA154CF3E100D234E6 /* ProgramDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgramDetailViewController.h; path = ../ProgramDetailViewController.h; sourceTree = "<group>"; };
 		6376EBEB154CF3E100D234E6 /* ProgramDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgramDetailViewController.m; path = ../ProgramDetailViewController.m; sourceTree = "<group>"; };
 		6376EBED154D046000D234E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6376EBEF154D065A00D234E6 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		6376EBF0154D065A00D234E6 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,8 @@
 				6376EBD5154C54B700D234E6 /* ServiceTableViewController.m */,
 				6376EBEA154CF3E100D234E6 /* ProgramDetailViewController.h */,
 				6376EBEB154CF3E100D234E6 /* ProgramDetailViewController.m */,
+				6376EBEF154D065A00D234E6 /* WebViewController.h */,
+				6376EBF0154D065A00D234E6 /* WebViewController.m */,
 				6376EBD7154C845100D234E6 /* SpringObject.h */,
 				6376EBD8154C845100D234E6 /* SpringObject.m */,
 				6376EBDA154C85B600D234E6 /* SpringLinkArray.h */,
@@ -346,6 +351,7 @@
 				6376EBDC154C85B600D234E6 /* SpringLinkArray.m in Sources */,
 				6376EBDF154C867000D234E6 /* SpringLink.m in Sources */,
 				6376EBEC154CF3E100D234E6 /* ProgramDetailViewController.m in Sources */,
+				6376EBF1154D065B00D234E6 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
